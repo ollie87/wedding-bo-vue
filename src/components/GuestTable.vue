@@ -47,7 +47,12 @@
             label="Busqueda menú"
           ></v-text-field>
         </td>
-        <td></td>
+        <td>
+          <v-checkbox
+            v-model="allergies"
+            label="Alergias"
+          ></v-checkbox>
+        </td>
         <td>
           <v-text-field
             v-model="bus"
@@ -75,7 +80,8 @@ export default Vue.extend({
     surname2: '',
     menu: '',
     age: '',
-    bus: ''
+    bus: '',
+    allergies: false
   }),
   mounted () {
     this.$store.dispatch('fetchGuests')
@@ -129,7 +135,14 @@ export default Vue.extend({
             return this.searchNameFormatted(value).includes(this.searchNameFormatted(this.menu))
           }
         },
-        { text: 'Alergias', value: 'allergies' },
+        {
+          text: 'Alergias',
+          value: 'allergies',
+          filter: value => {
+            if (!this.allergies) return true
+            return (value !== '' && this.searchNameFormatted(value) !== 'no' && this.searchNameFormatted(value) !== 'ninguna' && this.searchNameFormatted(value) !== 'ni' && this.searchNameFormatted(value) !== 'nah')
+          }
+        },
         {
           text: 'Bus',
           value: 'bus',

@@ -4,7 +4,7 @@ const Utils = {
       return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     },
     searchNameFormatted: (str: string) => {
-      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase().trim()
+      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
     }
   }
 }
