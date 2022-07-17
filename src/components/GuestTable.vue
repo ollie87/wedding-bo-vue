@@ -83,9 +83,6 @@ export default Vue.extend({
     bus: '',
     allergies: false
   }),
-  mounted () {
-    this.$store.dispatch('fetchGuests')
-  },
   computed: {
     ...mapGetters({
       guestList: 'getGuests'
