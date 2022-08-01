@@ -1,8 +1,10 @@
 <template>
   <div>
     <guest-table />
-    <bus-pie-chart />
-    <menu-pie-chart />
+    <div class="graphs">
+      <bus-pie-chart />
+      <menu-pie-chart />
+    </div>
   </div>
 </template>
 
@@ -25,3 +27,12 @@ export default Vue.extend({
   }
 })
 </script>
+<style scoped>
+.graphs {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+</style>

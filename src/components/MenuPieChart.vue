@@ -40,7 +40,7 @@ export default Vue.extend({
     busChartData (newData) {
       this.option = {
         title: {
-          text: 'MENU',
+          text: 'Menú',
           left: 'center'
         },
         tooltip: {
@@ -49,15 +49,19 @@ export default Vue.extend({
         },
         legend: {
           orient: 'vertical',
-          left: 'left',
+          bottom: 'bottom',
+          right: 'right',
           data: [
-            'SI',
-            'NO'
+            'Clásico',
+            'Infantil',
+            'Vegetariano',
+            'Vegano',
+            'Bebé (Sin menu)'
           ]
         },
         series: [
           {
-            name: 'MENU',
+            name: 'Menú',
             type: 'pie',
             radius: '55%',
             center: ['50%', '60%'],
@@ -78,7 +82,7 @@ export default Vue.extend({
 </script>
 <style scoped>
 .chart {
-  height: 30vh;
-  width: 30vh;
+  height: 40vh;
+  width: 40vh;
 }
 </style>

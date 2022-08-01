@@ -44,7 +44,7 @@ export default new Vuex.Store({
         } else if (currentValue.menu === 'Bebé (Sin menu)') {
           return accum.map((chartData: ChartData) => ({
             ...chartData,
-            value: chartData.name === 'Bebé (Sin menu' ? chartData.value + 1 : chartData.value
+            value: chartData.name === 'Bebé (Sin menu)' ? chartData.value + 1 : chartData.value
           }))
         } else if (currentValue.menu === 'Infantil') {
           return accum.map((chartData: ChartData) => ({

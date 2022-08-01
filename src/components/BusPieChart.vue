@@ -49,7 +49,8 @@ export default Vue.extend({
         },
         legend: {
           orient: 'vertical',
-          left: 'left',
+          bottom: 'bottom',
+          right: 'right',
           data: [
             'SI',
             'NO'
@@ -78,7 +79,7 @@ export default Vue.extend({
 </script>
 <style scoped>
 .chart {
-  height: 30vh;
-  width: 30vh;
+  height: 40vh;
+  width: 40vh;
 }
 </style>
